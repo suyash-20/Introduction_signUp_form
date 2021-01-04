@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url(./images/bg-intro-desktop.png);
+      background-color: hsl(0, 100%, 74%);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      padding: 80px;
+      margin: 0 auto;
+
+    }
+
+    .container>div {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-weight: bold;
+      color: white;
+      line-height: 45px;
+    }
+
+    p {
+      color: white;
+      opacity: .8;
+    }
+
+
+    .formBox {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .formBox p {
+      margin: 0;
+    }
+
+
+    .try-prompt {
+      background-color: hsl(248, 32%, 49%);
+      padding: 25px;
+    }
+
+
+
+    .form-control {
+
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .form-control small {
+      color: hsl(0, 100%, 74%);
+      font-weight: 600;
+      position: absolute;
+      bottom: -24px;
+      right: 0;
+      opacity: 0;
+      text-align: right;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1.3px solid hsl(246, 25%, 77%);
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 25px;
+      display: block;
+      width: 100%;
+    }
+
+    input:focus {
+      border: 1px solid hsl(248, 32%, 49%);
+      outline: none;
+    }
+
+
+
+    button {
+      width: 100%;
+      display: block;
+      background-color: hsl(154, 59%, 51%);
+      border-radius: 5px;
+      border: 1px solid hsl(154, 59%, 40%);
+      border-bottom-width: 2px;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 1px hsl(154, 59%, 51%);
+
+    }
+
+    button:active {
+      border-bottom-width: 1px;
+      transform: translateY(2px);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    .form-input {
+      position: relative;
+    }
+
+    small {
+      display: block;
+      color: #bbb;
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    small a {
+      color: hsl(0, 100%, 74%);
+      text-decoration: none;
+    }
+
+    .form-control.error input {
+      border-color: hsl(0, 100%, 74%);
+      color: hsl(0, 100%, 74%);
+    }
+
+    .form-control.error input::placeholder {
+      color: hsl(0, 100%, 74%);
+    }
+
+    .form-control.error small {
+      opacity: 1;
+    }
+
+    .form-control img {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+
+    .form-control.error img{
+      opacity: 1;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div>
+      <h1>Learn to code by watching others</h1>
+      <p> See how experienced developers solve problems in real-time.
+        Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </div>
+
+    <div>
+      <div class="formBox try-prompt">
+        <p>
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </p>
+      </div>
+
+      <form class="formBox" id="form">
+        <div class="form-control">
+          <input type="text" id="firstname" placeholder="First Name" />
+          <img src="./images/icon-error.svg" alt="error-icon" />
+          <small></small>
+        </div>
+        <div class="form-control">
+          <input type="text" id="lastname" placeholder="Last Name" />
+          <img src="./images/icon-error.svg" alt="error" />
+          <small></small>
+        </div>
+
+        <div class="form-control">
+          <input type="email" id="email" placeholder="Email Address" />
+          <img src="./images/icon-error.svg" alt="error" />
+          <small></small>
+        </div>
+
+        <div class="form-control">
+          <input type="password" id="password" placeholder="Password" />
+          <img src="./images/icon-error.svg" alt="error" />
+          <small></small>
+        </div>
+
+        <button>
+          Claim your free trail
+        </button>
+        <small class='terms'>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
+
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Suyash Chavan</a>.
+    </p>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
